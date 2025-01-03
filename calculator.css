@@ -90,3 +90,13 @@ button.number {
     color: #333; /* Cor do texto (cinza escuro) */
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); /* Sombra sutil no texto */
 }
+
+/* para centralizar todo o conteúdo no centro da tela*/
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Centraliza na tela */
+}
