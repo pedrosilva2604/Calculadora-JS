@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator JavaScript</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+<div class="calculator">
+    <div class="display">
+        <p id="display">0</p>
+    </div>
+    <div class="keys">
+        <button id="key-plus" onclick="appendToDisplay('+')">+</button>
+        <button id="key-less" onclick="appendToDisplay('-')">-</button>
+        <button id="key-multiplication" onclick="appendToDisplay('X')">X</button>
+        <button id="key-division" onclick="appendToDisplay('÷')">÷</button>
+        <button id="key-seven" onclick="appendToDisplay('7')">7</button>
+        <button id="key-eight" onclick="appendToDisplay('8')">8</button>
+        <button id="key-nine" onclick="appendToDisplay('9')">9</button>
+        <button id="key-four" onclick="appendToDisplay('4')">4</button>
+        <button id="key-five" onclick="appendToDisplay('5')">5</button>
+        <button id="key-six" onclick="appendToDisplay('6')">6</button>
+        <button id="key-one" onclick="appendToDisplay('1')">1</button>
+        <button id="key-two" onclick="appendToDisplay('2')">2</button>
+        <button id="key-three" onclick="appendToDisplay('3')">3</button>
+        <button id="key-zero" onclick="appendToDisplay('0')">0</button>
+        <button id="key-point" onclick="appendToDisplay('.')">.</button>
+        <button id="key-cancel" onclick="clearDisplay('AC')">AC</button>
+        <button id="key-equal" onclick="calculate('=')">=</button>
+    </div>
+</div>
+    <script src="calculator.js"></script>
+</body>
+</html>

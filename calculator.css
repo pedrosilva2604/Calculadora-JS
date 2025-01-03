@@ -1,0 +1,92 @@
+/* Estilo geral da calculadora */
+.calculator {
+    width: 300px; /* Largura fixa da calculadora */
+    border: 2px solid #ccc; /* Borda cinza clara ao redor */
+    border-radius: 10px; /* Cantos arredondados */
+    display: grid; /* Define o layout como grid */
+    grid-template-rows: auto 1fr; /* Divide o layout em duas partes: display e teclas */
+    background-color: #f9f9f9; /* Fundo claro da calculadora */
+}
+
+/* Estilo do display (área onde os números aparecem) */
+.display {
+    grid-row: 1; /* Ocupa a primeira linha do grid */
+    width: 94%; /* Largura do display, com margem lateral */
+    height: 90px; /* Altura do display */
+    background-color: #222; /* Fundo preto */
+    color: #fff; /* Texto branco para contraste */
+    font-size: 2rem; /* Tamanho inicial do texto (ajustado abaixo) */
+    text-align: right; /* Alinha o texto à direita */
+    padding: 10px; /* Espaçamento interno para afastar o texto das bordas */
+    border-radius: 5px 5px 0 0; /* Cantos superiores arredondados */
+    font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif; /* Fonte limpa e moderna */
+    font-size: 2.5rem; /* Tamanho maior do texto no display */
+    font-weight: bold; /* Deixa o texto em negrito */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6); /* Adiciona sombra ao texto para destaque */
+    overflow: hidden; /* Impede que o texto ultrapasse os limites */
+    white-space: nowrap; /* Evita quebras de linha no texto */
+}
+
+/* Estilo da área das teclas (botões) */
+.keys {
+    grid-row: 2; /* Ocupa a segunda linha do grid */
+    display: grid; /* Define um grid para os botões */
+    grid-template-columns: repeat(4, 1fr); /* Divide em 4 colunas iguais */
+    grid-template-rows: repeat(5, 60px); /* Divide em 5 linhas de altura fixa (60px cada) */
+    gap: 5px; /* Espaçamento entre os botões */
+    padding: 10px; /* Espaçamento interno ao redor dos botões */
+}
+
+/* Estilo geral dos botões */
+button {
+    font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif; /* Fonte limpa e moderna */
+    font-size: 1.5rem; /* Tamanho do texto nos botões */
+    font-weight: bold; /* Texto em negrito */
+    color: #333; /* Cor do texto (cinza escuro) */
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); /* Sombra sutil no texto */
+    border-radius: 15px; /* Cantos arredondados nos botões */
+}
+
+/* Efeito ao passar o mouse sobre os botões */
+button:hover {
+    background-color: #ddd; /* Cor de fundo mais clara */
+}
+
+/* Estilo para organizar botões específicos com base em sua posição */
+button:nth-child(1) { grid-column: 1; grid-row: 1; } /* Botão "+" */
+button:nth-child(2) { grid-column: 2; grid-row: 1; } /* Botão "-" */
+button:nth-child(3) { grid-column: 3; grid-row: 1; } /* Botão "X" */
+button:nth-child(4) { grid-column: 4; grid-row: 1; } /* Botão "÷" */
+
+button:nth-child(5) { grid-column: 1; grid-row: 2; } /* Botão "7" */
+button:nth-child(6) { grid-column: 2; grid-row: 2; } /* Botão "8" */
+button:nth-child(7) { grid-column: 3; grid-row: 2; } /* Botão "9" */
+
+button:nth-child(8) { grid-column: 1; grid-row: 3; } /* Botão "4" */
+button:nth-child(9) { grid-column: 2; grid-row: 3; } /* Botão "5" */
+button:nth-child(10) { grid-column: 3; grid-row: 3; } /* Botão "6" */
+
+button:nth-child(11) { grid-column: 1; grid-row: 4; } /* Botão "1" */
+button:nth-child(12) { grid-column: 2; grid-row: 4; } /* Botão "2" */
+button:nth-child(13) { grid-column: 3; grid-row: 4; } /* Botão "3" */
+
+button:nth-child(14) { grid-column: 1; grid-row: 5; } /* Botão "0" - Coluna 1 */
+button:nth-child(15) { grid-column: 2; grid-row: 5; } /* Botão "0" - Coluna 2 */
+button:nth-child(16) { grid-column: 3; grid-row: 5; } /* Botão "0" - Coluna 3 */
+
+/* Estilo específico para o botão "=" */
+button#key-equal {
+    grid-column: 4; /* Ocupa a quarta coluna */
+    grid-row: 2 / 6; /* Ocupa da segunda à sexta linha */
+    background-color: orange; /* Fundo laranja */
+    color: #fff; /* Texto branco */
+}
+
+/* Estilo específico para os botões numéricos */
+button.number {
+    font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif; /* Fonte moderna */
+    font-size: 1.8rem; /* Tamanho maior do texto */
+    font-weight: bold; /* Texto em negrito */
+    color: #333; /* Cor do texto (cinza escuro) */
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); /* Sombra sutil no texto */
+}
